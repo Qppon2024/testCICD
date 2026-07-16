@@ -16,13 +16,11 @@ TEST(TestCaseName, TestName) {
   EXPECT_EQ(s.ans(20,5,20),120);
 }
 TEST(TestCaseNameOK, TestName) {
-	Story s;
 	
 	
   EXPECT_EQ(1,1);
 }
 TEST(TestCaseNameNG, TestName) {
-	Story s;
 	
 	
   EXPECT_EQ(1,0);
