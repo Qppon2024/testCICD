@@ -1,5 +1,6 @@
 name: VC2010 Auto Build
-# mainブランチにコードがプッシュされたら起動するon:
+# mainブランチにコードがプッシュされたら起動する
+on:
   push:
     branches: [ "master" ]
 jobs:
