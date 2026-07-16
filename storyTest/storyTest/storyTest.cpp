@@ -15,4 +15,8 @@ TEST(TestCaseName, TestName) {
 	
   EXPECT_EQ(s.ans(20,5,20),120);
 }
-
+int main(int argc, char **argv) {
+    ::testing::InitGoogleTest(&argc, argv);
+    int result = RUN_ALL_TESTS();
+    return result; // テスト失敗時は 1 以上が返り、成功時は 0 が返る
+}
