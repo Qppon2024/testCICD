@@ -1,0 +1,20 @@
+name: VC2010 Auto Build
+# mainブランチにコードがプッシュされたら起動するon:
+  push:
+    branches: [ "master" ]
+jobs:
+  build-job:
+    # クラウドではなく、ステップ1で登録した「自社PC（セルフホスト）」で動かすという指定
+    runs-on: self-hosted
+
+    steps:
+    # 1. GitHubから最新のソースコードを自社PCにダウンロードする
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    # 2. 先ほど成功した、VC2010のビルド環境（環境変数）を呼び出してMSBuildを実行する
+    - name: Run MSBuild
+      shell: cmd
+      run: |
+        call "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\vcvarsall.bat"  amd64
+        msbuild storyTest\storyTest.sln /p:Configuration=Debug && .\storyTest\x64\Debug\storyTest.exe
