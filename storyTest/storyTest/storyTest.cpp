@@ -1,6 +1,6 @@
 // storyTest.cpp : コンソール アプリケーションのエントリ ポイントを定義します。
 //
-
+#pragma once
 #include "stdafx.h"
 
 #include <gtest/gtest.h>
