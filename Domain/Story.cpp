@@ -7,4 +7,5 @@ int Story::ans(int a,int b, int c)
 		//return m.multi(a,b)+c;
 		return 0;
 
+
 	}

@@ -1,4 +1,3 @@
-
 #include "Multi.h"
 class Story{
 public:
