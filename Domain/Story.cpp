@@ -1,4 +1,4 @@
-#pragma onece
+
 #include "StdAfx.h"
 #include "Story.h"
 int Story::ans(int a,int b, int c)
