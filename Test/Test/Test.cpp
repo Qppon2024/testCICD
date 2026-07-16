@@ -12,6 +12,7 @@ using ::testing::AtLeast;
 TEST(TestCaseName, TestName) {
 	Multi s;
 	
+
 	
   EXPECT_EQ(s.multi(20,5),100);
 }
