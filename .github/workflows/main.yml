@@ -18,6 +18,6 @@ jobs:
       shell: cmd
       run: |
         call "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\vcvarsall.bat" amd64
-        msbuild storyTest\storyTest.sln /p:Configuration=Debug /t:rebuild 
+        msbuild storyTest\storyTest.sln /p:Configuration=Debug /t:Clean /t:Rebuild 
         .\storyTest\x64\Debug\storyTest.exe
         if %errorLevel% neq 0 exit /b %errorLevel%
