@@ -7,11 +7,15 @@ jobs:
   build-job:
     # クラウドではなく、ステップ1で登録した「自社PC（セルフホスト）」で動かすという指定
     runs-on: self-hosted
-
+    defaults:
+      run:
+        working-directory: C:\testCICD  # ここで実行場所を強制的に浅くする
     steps:
     # 1. GitHubから最新のソースコードを自社PCにダウンロードする
     - name: Checkout code
       uses: actions/checkout@v4
+      with:
+        path: .
 
     # 2. 先ほど成功した、VC2010のビルド環境（環境変数）を呼び出してMSBuildを実行する
     - name: Run MSBuild
